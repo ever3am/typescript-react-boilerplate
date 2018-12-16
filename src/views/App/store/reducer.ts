@@ -1,7 +1,7 @@
  import * as constants from './constants';
 import { combineReducers } from 'redux';
 import { History } from 'history';
-import { connectRouter } from 'connected-react-router';
+import { connectRouter, RouterState } from 'connected-react-router';
 import { AppActions } from './actions';
 
 export interface AppState {
@@ -27,3 +27,8 @@ export const createRootReducer = (history: History) => combineReducers({
   app: rootReducer,
   router: connectRouter(history)
 });
+
+export interface State {
+  app: AppState,
+  router: RouterState
+}

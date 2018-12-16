@@ -6,6 +6,7 @@ import { history, store } from './store';
 import App from './views/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import './assets/css/index.css';
+import 'antd/dist/antd.css';
 
 ReactDOM.render(
   <Provider store={store}>
